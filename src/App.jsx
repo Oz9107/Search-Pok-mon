@@ -1,29 +1,19 @@
-import './App.css'
-import Joke from './components/joke'
-import Emoji from './components/emoji';
-import Pokemon from './components/pokemon';
+import "./App.css";
+//import Joke from "./components/joke";
+//import Emoji from "./components/emoji";
+import Pokemon from "./components/pokemon";
 
 function App() {
   return (
     <>
-      <Joke />
+      {/* <Joke />
       <hr />
       <Emoji />
-      <hr />
+      <hr /> */}
       <Pokemon />
     </>
   );
 }
 
-export default App
-
-
-
-
-
-
-
-
-
-
+export default App;
 
