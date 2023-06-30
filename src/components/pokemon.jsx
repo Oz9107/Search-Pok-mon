@@ -12,6 +12,9 @@ const Pokemon = () => {
   useEffect(() => {
     //PARAMETRO ES UNA PARTE DINAMICA DE LA URL EN ESTE CASO ES => https://pokeapi.co/api/v2/pokemon
     //UN IDENTIFICADOR ES ALGO UNICO ES ESTE CASO ES => CHARIZARD
+    //PARA QUE CAMBIE DE NUEVO SU UNIDAD DE MEDIDA CUANDO CARGUE
+    setIsDecimeter(true)
+
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
 
@@ -29,10 +32,16 @@ const Pokemon = () => {
     const random = Math.floor(Math.random() * (1281 - 1) + 1);
     setId(random);
   };
-
+  //TRANSFORMAS UNICDADES DE MEDIDA
   //1dc decimetro es igual a 10cm
   //1hg hectogramos es igual a 0.1 kg
+  const height = 17 //dc
 
+  const [isDecimeters, setIsDecimeter] = useState(true)
+
+  const chageUnits = () => {
+    setIsDecimeter (!isDecimeters)
+  }
   return (
     <>
       <div className="StylePokemon">
@@ -54,7 +63,9 @@ const Pokemon = () => {
         <p>Type: {info.types ? info.types[0].type.name : "No name"}</p>
         {/* Tambien es valido arreglo?.[0]?.nombre */}
         <p>
-          Height: {info.height} <button>Change height units</button>
+          Height: {isDecimeters ? height : height * 10}
+          {isDecimeters ? "dc " : "cm "}
+          <button onClick={chageUnits}>Change height units</button>
         </p>
         <p>
           Weight: {info.weight} <button>change weight units</button>
