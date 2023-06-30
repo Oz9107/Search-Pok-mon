@@ -42,7 +42,7 @@ body {
   font-family: Comic Sans MS;
   font-weight: bold;
   font-size: 25px;
-  color: #f3f94c;
+  color: #878ebb;
   text-shadow: -1px 0 #414d68, 0 1px #414d68, 1px 0 #414d68, 0 -1px #414d68,
     -2px 2px 0 #414d68, 2px 2px 0 #414d68, 1px 1px #414d68, 2px 2px #414d68,
     3px 3px #414d68, 4px 4px #414d68, 5px 5px #414d68;
@@ -50,19 +50,20 @@ body {
 }
 .StylePokemon p {
   margin: 5px;
+  color: #30384b;
 }
 button {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(35, 32, 32, 0.9) !important;
   font-size: 12px;
   padding: 0.5em 1.2em;
   background: #318aac;
   border: 1px solid;
-  border-color: #318aac;
+  border-color: #e6ecef;
   position: relative;
   cursor: pointer;
 }
 button:hover {
-  color: rgba(255, 255, 255, 1) !important;
+  color: rgb(212, 220, 231) !important;
   box-shadow: 0 4px 16px rgb(98, 39, 237);
   transition: all 0.2s ease;
 }
