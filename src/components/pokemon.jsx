@@ -64,13 +64,13 @@ const Pokemon = () => {
         <h3>Search your favorite Pokémon</h3>
         <hr />
         <h3>Name: {info.name}</h3>
-        <div>Height: {info.height}</div>
         <p>Base Experience: {info.base_experience}</p>
         <img
           className="ImagPok"
           src={info.sprites?.front_default}
           alt="Charizard"
         />
+        <button onClick={changeCharacter}>Change Pokémon</button>
         <p>Best Attack: {info.moves ? info.moves[0].move.name : "No move"}</p>
         <p>Stats:</p>
         <p>HP: {info.stats ? info.stats[0].base_stat : "No stats"}</p>
@@ -89,7 +89,6 @@ const Pokemon = () => {
           <button onClick={toggleWeightUnits}>Change weight units</button>
         </p>
 
-        <button onClick={changeCharacter}>Change Pokémon</button>
         {/* ese error general de consola es un undefined info.location.name */}
         {/* se soluciona con encadenamiento opcional, si esta indefinido no sigue con el proceso pero si esta bien continua */}
         {/* CAMBIAR DE MANERA RAMDOM EN ESTE CASO LOS PERSONAJES */}
